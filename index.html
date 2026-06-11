@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大邁活動整合有限公司 | DA MY EVENT INTEGRATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .hero-gradient { background: linear-gradient(135deg, #1a3a5c 0%, #254b7a 100%); }
+        .case-img { transition: transform 0.3s ease; }
+        .case-card:hover .case-img { transform: scale(1.05); }
+        .service-card { transition: all 0.3s; border:2px solid transparent; }
+        .service-card:hover { border-color:#e8932c; box-shadow:0 4px 20px rgba(232,147,44,0.15); }
+        .offset-section { scroll-margin-top: 80px; }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<!-- 導覽列 -->
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 已替換為圖片Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="#home" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="#services" class="nav-item text-white px-3 py-2">服務項目</a></li>
+                <li><a href="#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="#home" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="#services" class="mobile-nav-item block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 首頁區塊 -->
+<section id="home" class="offset-section hero-gradient min-h-screen flex flex-col justify-center pt-10 pb-16">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="text-white mb-16">
+            <h1 class="text-[clamp(2rem,5vw,4rem)] font-bold leading-tight mb-4">大邁活動整合有限公司</h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/80 mb-2">DA MY EVENT INTEGRATION CO., LTD.</p>
+            <p class="text-[clamp(1.25rem,3vw,2rem)] font-medium text-accent my-6">承接期待，邁向精彩</p>
+            <p class="text-white/70 max-w-2xl mb-8">專業活動整合與品牌體驗執行夥伴</p>
+            <a href="#contact" class="inline-block bg-accent text-white px-8 py-3 rounded-card font-medium shadow-lg">立即諮詢</a>
+        </div>
+
+        <!-- 品牌精神 -->
+        <div class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-10 text-center">品牌精神</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm rounded-card p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-accent mb-3">大步整合</h3>
+                    <p class="text-white/80 text-sm">活動需要的不只是單一服務，而是完整整合。串聯企劃、設計、硬體、影像、流程與執行資源。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-card p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-accent mb-3">穩步執行</h3>
+                    <p class="text-white/80 text-sm">再好的創意，都需要落地執行。重視每個細節與流程，確保活動順利完成，讓客戶安心。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-card p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-accent mb-3">陪伴前行</h3>
+                    <p class="text-white/80 text-sm">活動籌備充滿變數與挑戰。我們不只是執行團隊，更是值得信賴的合作夥伴。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-card p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-accent mb-3">邁向有感</h3>
+                    <p class="text-white/80 text-sm">不只追求把活動辦完，更希望創造真正有感的成果，讓品牌價值被看見。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 精選案例（卡片可點擊跳轉） -->
+        <div class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-10 text-center">精選案例</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="case01.html" class="case-card bg-white rounded-card overflow-hidden shadow-md block">
+                    <div class="overflow-hidden">
+                        <img src="https://picsum.photos/id/20/400/300" alt="科技大廠年度尾牙" class="case-img w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <span class="inline-block bg-accent/20 text-accent text-xs px-2 py-1 rounded mb-2">科技業</span>
+                        <h4 class="font-semibold text-textDark">科技大廠年度尾牙</h4>
+                        <p class="text-textLight text-sm mt-1">尾牙</p>
+                    </div>
+                </a>
+                <a href="case02.html" class="case-card bg-white rounded-card overflow-hidden shadow-md block">
+                    <div class="overflow-hidden">
+                        <img src="https://picsum.photos/id/26/400/300" alt="美業品牌發表會" class="case-img w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <span class="inline-block bg-accent/20 text-accent text-xs px-2 py-1 rounded mb-2">美業</span>
+                        <h4 class="font-semibold text-textDark">美業品牌發表會</h4>
+                        <p class="text-textLight text-sm mt-1">品牌發表</p>
+                    </div>
+                </a>
+                <a href="case03.html" class="case-card bg-white rounded-card overflow-hidden shadow-md block">
+                    <div class="overflow-hidden">
+                        <img src="https://picsum.photos/id/29/400/300" alt="政府聯合婚禮" class="case-img w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <span class="inline-block bg-accent/20 text-accent text-xs px-2 py-1 rounded mb-2">政府機關</span>
+                        <h4 class="font-semibold text-textDark">政府聯合婚禮</h4>
+                        <p class="text-textLight text-sm mt-1">典禮活動</p>
+                    </div>
+                </a>
+                <a href="case04.html" class="case-card bg-white rounded-card overflow-hidden shadow-md block">
+                    <div class="overflow-hidden">
+                        <img src="https://picsum.photos/id/36/400/300" alt="製造業40週年慶" class="case-img w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <span class="inline-block bg-accent/20 text-accent text-xs px-2 py-1 rounded mb-2">製造業</span>
+                        <h4 class="font-semibold text-textDark">製造業40週年慶</h4>
+                        <p class="text-textLight text-sm mt-1">週年慶</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 品牌故事 -->
+<section id="story" class="offset-section py-20 bg-white">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand mb-10 text-center">品牌故事</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <p class="text-textLight leading-loose">大邁 DA MY 的誕生，源自一個簡單的信念：每一場活動，都是企業與品牌向前邁進的重要一步。無論是尾牙春酒、企業家庭日、品牌發表會、開幕典禮，或是大型頒獎活動，每個重要時刻都承載著企業的目標與期待。我們以整合規劃、穩定執行與細節把關為核心，成為客戶值得信賴的活動夥伴。從想法到現場，從籌備到落地，大邁陪伴客戶把壓力化為安心，把每個重要時刻邁向成功。</p>
+            </div>
+            <div class="bg-secondary rounded-card p-8 shadow-md">
+                <h3 class="text-xl font-bold text-brand mb-6 text-center">公司現況</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="text-center p-3 bg-white rounded shadow-sm">
+                        <p class="text-accent font-bold text-xl">2018 年</p>
+                        <p class="text-xs text-textLight mt-1">成立時間</p>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded shadow-sm">
+                        <p class="text-accent font-bold text-xl">20 人以上</p>
+                        <p class="text-xs text-textLight mt-1">專業團隊</p>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded shadow-sm">
+                        <p class="text-accent font-bold text-xl">1,000+ 場活動</p>
+                        <p class="text-xs text-textLight mt-1">累計活動</p>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded shadow-sm">
+                        <p class="text-accent font-bold text-xl">95% 滿意度</p>
+                        <p class="text-xs text-textLight mt-1">客戶滿意度</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 服務項目 -->
+<section id="services" class="offset-section py-20 bg-secondary">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand mb-10 text-center">服務項目</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="service-card bg-white rounded-card p-6 shadow-md">
+                <div class="text-4xl mb-4">📋</div>
+                <h3 class="text-lg font-bold text-brand mb-2">活動統籌</h3>
+                <p class="text-textLight text-sm mb-4">從想法到落地，完整活動企劃與流程規劃</p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">尾牙春酒</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">企業家庭日</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">品牌發表會</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">開幕典禮</span>
+                </div>
+                <a href="service01.html" class="block w-full bg-brand text-white py-2 rounded-card text-sm hover:bg-brand/90 text-center">了解更多</a>
+            </div>
+            <div class="service-card bg-white rounded-card p-6 shadow-md">
+                <div class="text-4xl mb-4">🔊</div>
+                <h3 class="text-lg font-bold text-brand mb-2">硬體統籌</h3>
+                <p class="text-textLight text-sm mb-4">專業設備整合，打造完美活動場域</p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">燈光音響</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">舞台搭建</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">視訊設備</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">帳篷桌椅</span>
+                </div>
+                <a href="service02.html" class="block w-full bg-brand text-white py-2 rounded-card text-sm hover:bg-brand/90 text-center">了解更多</a>
+            </div>
+            <div class="service-card bg-white rounded-card p-6 shadow-md">
+                <div class="text-4xl mb-4">🎨</div>
+                <h3 class="text-lg font-bold text-brand mb-2">設計統籌</h3>
+                <p class="text-textLight text-sm mb-4">視覺設計與會場佈置，創造品牌氛圍</p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">會場佈置</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">視覺設計</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">品牌形象規劃</span>
+                </div>
+                <a href="service03.html" class="block w-full bg-brand text-white py-2 rounded-card text-sm hover:bg-brand/90 text-center">了解更多</a>
+            </div>
+            <div class="service-card bg-white rounded-card p-6 shadow-md">
+                <div class="text-4xl mb-4">📹</div>
+                <h3 class="text-lg font-bold text-brand mb-2">影像統籌</h3>
+                <p class="text-textLight text-sm mb-4">捕捉精彩瞬間，延續活動影響力</p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">平面攝影</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">動態攝影</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">直播轉播</span>
+                    <span class="bg-brand/10 text-brand text-xs px-2 py-1 rounded">影片製作</span>
+                </div>
+                <a href="service04.html" class="block w-full bg-brand text-white py-2 rounded-card text-sm hover:bg-brand/90 text-center">了解更多</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 最新消息 -->
+<section id="news" class="offset-section py-20 bg-white">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand mb-10 text-center">最新消息</h2>
+        <div class="space-y-4">
+            <div class="border-l-4 border-accent pl-4 py-3 bg-secondary rounded-r">
+                <span class="text-accent text-sm">2025.01.01</span>
+                <h4 class="font-semibold text-brand mt-1">大邁 DA MY 品牌正式上線</h4>
+                <p class="text-sm text-textLight">以「承接期待，向精彩」為使命，提供專業活動整合服務</p>
+            </div>
+            <div class="border-l-4 border-accent pl-4 py-3 bg-secondary rounded-r">
+                <span class="text-accent text-sm">2024.10.15</span>
+                <h4 class="font-semibold text-brand mt-1">2024 年度尾牙專案開始預約</h4>
+                <p class="text-sm text-textLight">立即預約享早鳥優惠，打造難忘的企業盛宴</p>
+            </div>
+            <div class="border-l-4 border-accent pl-4 py-3 bg-secondary rounded-r">
+                <span class="text-accent text-sm">2024.09.10</span>
+                <h4 class="font-semibold text-brand mt-1">大邁榮獲優質活動公司認證</h4>
+                <p class="text-sm text-textLight">持續為客戶提供高品質的活動整合服務</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 聯絡我們 -->
+<section id="contact" class="offset-section py-20 bg-brand text-white">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center">聯絡我們</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-xl font-semibold mb-6">聯絡資訊</h3>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">📍</span>
+                        <a href="#" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">地址</p>
+                            <p>402臺中市南區積善里興大路145號</p>
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">📞</span>
+                        <a href="tel:0422873181" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">電話</p>
+                            <p>04-2287-3181</p>
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">✉️</span>
+                        <a href="mailto:DAMY@gmail.com" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">Email</p>
+                            <p>DAMY@gmail.com</p>
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">💬</span>
+                        <a href="#" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">LINE ID</p>
+                            <p>DAMY</p>
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">📘</span>
+                        <a href="https://www.facebook.com/damy2026?locale=zh_TW" target="_blank" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">FB</p>
+                            <p>大邁專屬FB</p>
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">📷</span>
+                        <a href="#" target="_blank" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">IG</p>
+                            <p>DAMY</p>
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="text-accent text-xl">🎬</span>
+                        <a href="#" target="_blank" class="flex-1 px-4 py-3 border border-white/30 rounded-card text-white hover:bg-white/10 transition">
+                            <p class="text-white/70 text-xs">YT</p>
+                            <p>DAMY</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-6">線上諮詢</h3>
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="text-sm text-white/80">姓名</label>
+                        <input type="text" class="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white" placeholder="請輸入姓名">
+                    </div>
+                    <div>
+                        <label class="text-sm text-white/80">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white" placeholder="請輸入Email">
+                    </div>
+                    <div>
+                        <label class="text-sm text-white/80">需求說明</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white" placeholder="請描述活動需求"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-accent text-white py-3 rounded font-medium">送出諮詢</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 頁尾 -->
+<footer class="bg-textDark py-6 text-white/60 text-center text-sm">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // 手機選單開關
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(item => {
+        item.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 表單送出提示
+    document.getElementById('contactForm').addEventListener('submit', e => {
+        e.preventDefault();
+        alert('表單送出成功！我們將盡快與您聯繫。');
+    });
+
+    // 導覽列滾動高亮
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.offset-section');
+        const navItems = document.querySelectorAll('.nav-item, .mobile-nav-item');
+        let current = '';
+        sections.forEach(sec => {
+            const top = window.scrollY;
+            const offset = sec.offsetTop - 120;
+            const height = sec.offsetHeight;
+            if (top >= offset && top < offset + height) {
+                current = sec.getAttribute('id');
+            }
+        });
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === '#' + current) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

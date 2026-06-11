@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業40週年慶 - 案例分享 | 大邁活動整合有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 圖片Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="index.html" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="index.html#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="index.html#services" class="nav-item text-white px-3 py-2">服務項目</a></li>
+                <li><a href="index.html#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="index.html#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="index.html" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="index.html#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="index.html#services" class="mobile-nav-item block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="index.html#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <a href="index.html#home" class="inline-flex items-center text-accent mb-6 hover:underline">← 返回案例列表</a>
+    <div class="bg-white rounded-card shadow-md p-8 mb-8">
+        <h1 class="text-3xl font-bold text-brand mb-2">製造業40週年慶</h1>
+        <p class="text-accent mb-6">產業：製造業 ｜ 活動類型：週年慶</p>
+        <img src="pig/case/case04.png" alt="製造業40週年慶" class="w-full h-64 object-cover rounded-card mb-6">
+        <div class="text-textLight leading-loose space-y-4">
+            <h2 class="text-xl font-bold text-brand">案例介紹</h2>
+            <p>協助資深製造業廠商舉辦40週年慶祝活動，邀請資深員工、歷任主管與合作夥伴與會，活動融合回顧歷史、表揚資深同仁、歡樂聚餐與表演節目。</p>
+            <h2 class="text-xl font-bold text-brand mt-6">執行內容</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>週年慶整體流程、節目規劃與頒獎安排</li>
+                <li>企業歷史形象牆、回顧影片與會場視覺設計</li>
+                <li>大型舞台、燈光音響、特效設備全區建置</li>
+                <li>活動影片剪輯、現場直播與全程影像紀錄</li>
+                <li>嘉賓引導、桌次安排與全場現場執行控管</li>
+            </ul>
+            <h2 class="text-xl font-bold text-brand mt-6">執行成果</h2>
+            <p>活動溫馨且充滿紀念意義，完整呈現企業40年發展歷程，全場氣氛融洽，順利完成週年慶活動，獲得全體與會人員認可。</p>
+        </div>
+        <div class="mt-8 pt-6 border-t">
+            <a href="index.html#contact" class="inline-block bg-accent text-white px-6 py-3 rounded-card hover:bg-accent/90">諮詢同款活動</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-textDark py-6 text-white/60 text-center text-sm">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(i => i.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硬體統籌 - 大邁活動整合有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .service-block { margin-bottom: 3rem; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 統一使用 logo.png 作為網站LOGO -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="index.html" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="index.html#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="index.html#services" class="nav-item active text-white px-3 py-2">服務項目</a></li>
+                <li><a href="index.html#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="index.html#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-2xl text-white">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="index.html" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="index.html#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="index.html#services" class="mobile-nav-item active block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="index.html#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <a href="index.html#services" class="inline-flex items-center text-accent mb-6 hover:underline">← 返回服務列表</a>
+
+    <div class="bg-white rounded-card shadow-md p-6 md:p-8">
+        <!-- 頁面標題 + 頂部主視覺圖 3:1比例 -->
+        <h1 class="text-3xl font-bold text-brand mb-4">硬體統籌</h1>
+        <!--<img src="https://picsum.photos/id/26/1200/400" alt="硬體統籌服務" class="w-full h-56 object-cover rounded-card mb-10">-->
+        <img src="pig/S02/s02_00.png" alt="硬體統籌服務" class="w-full aspect-[3/1] object-cover rounded-card mb-10">
+
+        <!-- 1. 硬體統籌 總介紹 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/21/600/400" alt="硬體統籌總覽" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_01.png" alt="硬體統籌總覽" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">硬體統籌</h2>
+                <p class="text-textLight leading-loose">
+                    我們具備專業硬體統籌能力，提供一站式技術支援與整體規劃，服務範圍涵蓋燈光音響、舞台工程、電視牆、各式帳篷與創意特效。設備齊全、技術團隊經驗豐富，從設備搭建到現場調試全程把關，用專業硬體配置保障每一場活動完美呈現。
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. 音響工程 (圖右、文左 交替排版) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">音響工程</h2>
+                <p class="text-textLight leading-loose">
+                    配備資深音響工程團隊，精通各類音響設備選型與現場配置。可依照場地大小、活動類型（室內活動、戶外場合、舞台表演等）量身規劃，確保全場音效清晰、聲音分佈均勻，讓與會者享有高品質聽覺體驗，提升活動專業度。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/22/600/400" alt="音響工程" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_02.png" alt="音響工程" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 3. 燈光工程 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/23/600/400" alt="燈光工程" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_03.png" alt="燈光工程" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">燈光工程</h2>
+                <p class="text-textLight leading-loose">
+                    專業燈光設計與技術團隊，依活動主題、氛圍需求打造專屬燈光效果。設備安全穩定，燈光層次豐富，既能烘托活動氣氛，也能滿足舞台演出、頒獎典禮等專業場域需求，兼顧視覺美感與現場安全性。
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. 舞台搭建 (圖右、文左) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">舞台搭建</h2>
+                <p class="text-textLight leading-loose">
+                    提供安全穩固、兼具美觀與實用的舞台設計與搭建服務。團隊施工效率高，可依活動規模、場地條件客製化打造舞台，無論小型活動或是大型盛會，都能達到高規格執行標準，提升整體活動質感。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/24/600/400" alt="舞台搭建" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_04.png" alt="舞台搭建" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 5. 帳篷搭建 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/25/600/400" alt="帳篷搭建" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_05.png" alt="帳篷搭建" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">帳篷搭建</h2>
+                <p class="text-textLight leading-loose">
+                    專業帳篷搭建服務，適用室內臨時區域與各類戶外活動。提供現場勘查、安裝、拆卸一條龍作業，帳篷結構穩固，可抵擋多種天氣狀況，打造整潔有序的活動空間，讓客戶全程無後顧之憂。
+                </p>
+            </div>
+        </div>
+
+        <!-- 6. 視訊設備 (圖右、文左) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">視訊設備</h2>
+                <p class="text-textLight leading-loose">
+                    完備的視訊設備解決方案，包含大型電視牆、高階投影機、投影布幕等設備。畫面清晰、顯示效果出色，可滿足記者會、研習營、典禮活動等多種場景，強化資訊傳達與視覺吸引力。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/26/600/400" alt="視訊設備" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_06.png" alt="視訊設備" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 7. 特效效果 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/27/600/400" alt="特效效果" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S02/s02_07.png" alt="特效效果" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">特效效果</h2>
+                <p class="text-textLight leading-loose">
+                    提供煙霧機、彩帶、CO₂氣柱等多種創意特效設備，適用於開幕儀式、開場表演、抽獎互動等橋段。特效設備安全可靠，視覺與體驗感十足，為活動打造難忘的精彩瞬間。
+                </p>
+            </div>
+        </div>
+
+        <!-- 底部諮詢按鈕 -->
+        <div class="mt-12 pt-6 border-t">
+            <a href="index.html#contact" class="inline-block bg-accent text-white px-6 py-3 rounded-card hover:bg-accent/90">立即線上諮詢</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-textDark py-6 text-center text-sm text-white/60">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(i => i.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+</body>
+</html>

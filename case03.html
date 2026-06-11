@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政府聯合婚禮 - 案例分享 | 大邁活動整合有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 圖片Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="index.html" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="index.html#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="index.html#services" class="nav-item text-white px-3 py-2">服務項目</a></li>
+                <li><a href="index.html#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="index.html#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="index.html" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="index.html#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="index.html#services" class="mobile-nav-item block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="index.html#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <a href="index.html#home" class="inline-flex items-center text-accent mb-6 hover:underline">← 返回案例列表</a>
+    <div class="bg-white rounded-card shadow-md p-8 mb-8">
+        <h1 class="text-3xl font-bold text-brand mb-2">政府聯合婚禮</h1>
+        <p class="text-accent mb-6">產業：政府機關 ｜ 活動類型：典禮活動</p>
+        <img src="pig/case/case03.png" alt="政府聯合婚禮" class="w-full h-64 object-cover rounded-card mb-6">
+        <div class="text-textLight leading-loose space-y-4">
+            <h2 class="text-xl font-bold text-brand">案例介紹</h2>
+            <p>受地方政府委託辦理聯合婚禮典禮，現場有多對新人、長官與親友到場，活動講究莊重溫馨的氛圍，同時需嚴格依照官方流程與禮儀執行。</p>
+            <h2 class="text-xl font-bold text-brand mt-6">執行內容</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>典禮流程規劃、禮儀引導與隊伍動線安排</li>
+                <li>場地佈置、喜慶視覺設計與氛圍營造</li>
+                <li>舞台、音響、投影等硬體設備建置與技術支援</li>
+                <li>全程攝影錄影、團體照與個人畫面拍攝</li>
+                <li>現場秩序維護、長官與來賓接待服務</li>
+            </ul>
+            <h2 class="text-xl font-bold text-brand mt-6">執行成果</h2>
+            <p>整場典禮莊重又溫馨，流程完全符合官方規範，動線流暢、現場秩序良好，圓滿完成本次聯合婚禮執行任務。</p>
+        </div>
+        <div class="mt-8 pt-6 border-t">
+            <a href="index.html#contact" class="inline-block bg-accent text-white px-6 py-3 rounded-card hover:bg-accent/90">諮詢同款活動</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-textDark py-6 text-white/60 text-center text-sm">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(i => i.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+</body>
+</html>

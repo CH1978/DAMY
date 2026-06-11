@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動統籌 - 大邁活動整合有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .service-block { margin-bottom: 3rem; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 圖片Logo 維持原設定 -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="index.html" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="index.html#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="index.html#services" class="nav-item active text-white px-3 py-2">服務項目</a></li>
+                <li><a href="index.html#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="index.html#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-2xl text-white">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="index.html" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="index.html#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="index.html#services" class="mobile-nav-item active block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="index.html#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <a href="index.html#services" class="inline-flex items-center text-accent mb-6 hover:underline">← 返回服務列表</a>
+
+    <div class="bg-white rounded-card shadow-md p-6 md:p-8">
+        <!-- 頁面標題 + 頂部主視覺圖 3:1比例 -->
+        <h1 class="text-3xl font-bold text-brand mb-4">活動統籌</h1>
+        <!--<img src="https://picsum.photos/id/20/1200/400" alt="活動統籌服務" class="w-full h-56 object-cover rounded-card mb-10">-->
+        <img src="pig/S01/s01_00.png" alt="活動統籌服務" class="w-full aspect-[3/1] object-cover rounded-card mb-10">
+
+        <!-- 1. 活動規劃 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/10/600/400" alt="活動規劃" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_01.png" alt="活動規劃" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">活動規劃</h2>
+                <p class="text-textLight leading-loose">
+                    我們累積上百場活動執行經驗，服務範圍涵蓋春酒尾牙、表揚活動、企業家庭日、開幕剪綵等多元類型。團隊具備扎實的策劃能力與豐富整合經驗，秉持專業、創新、用心的服務理念，從初步構想到現場落地全程把關，重視每一個執行細節，致力為客戶打造圓滿難忘的活動。
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. 企劃發想 (圖右、文左 交替排版) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">企劃發想</h2>
+                <p class="text-textLight leading-loose">
+                    針對不同活動屬性提供客製化主題發想：企業春酒尾牙可打造復古風、運動風等趣味主題；新品發表會依照產品特色量身規劃創意內容，凸顯產品亮點。同時支援各類客製化活動設計，依你的需求打造專屬活動風格。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/11/600/400" alt="企劃發想" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_02.png" alt="企劃發想" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 3. 流程規劃 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/12/600/400" alt="流程規劃" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_03.png" alt="流程規劃" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">流程規劃</h2>
+                <p class="text-textLight leading-loose">
+                    依照活動屬性、人數與氛圍，精細安排節目表演、長官致詞、頒獎儀式等所有環節。每一場活動都會搭配專屬時程表，依現場節奏調整流程順序，確保整個活動流暢自然、環環相扣。
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. 現場執行 (圖右、文左) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">現場執行</h2>
+                <p class="text-textLight leading-loose">
+                    配備資深專業執行團隊，全場掌控活動進度。從來賓報到、人流引導、節目執行，到突發狀況臨場應變，皆能精準處理。團隊全程駐場監控，嚴格遵守時間規劃，讓客戶無需操心現場大小事務。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/13/600/400" alt="現場執行" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_04.png" alt="現場執行" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 5. 活動整合 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/14/600/400" alt="活動整合" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_05.png" alt="活動整合" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">活動整合</h2>
+                <p class="text-textLight leading-loose">
+                    依據活動需求一站式整合燈光音響、表演團隊、動靜態攝影等優質資源。無論是大型商業活動還是小型聚會，我們都會篩選合適的合作廠商，省去你多方對接的麻煩，提供高品質、高匹配度的活動配套服務。
+                </p>
+            </div>
+        </div>
+
+        <!-- 6. 場地溝通 (圖右、文左) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">場地溝通</h2>
+                <p class="text-textLight leading-loose">
+                    可協助對宴會廳、展覽館、運動場等各類場館進行對接與協調，處理進場動線、場地限制、現場規劃等細節。同時依照場地條件設計安全動線與佈局方案，全權負責場地相關溝通作業。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/15/600/400" alt="場地溝通" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_06.png" alt="場地溝通" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 7. 單一窗口服務 (圖左、文右) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/16/600/400" alt="單一窗口服務" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S01/s01_07.png" alt="單一窗口服務" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">單一窗口服務</h2>
+                <p class="text-textLight leading-loose">
+                    全程設立專屬專案窗口，辦活動無需同時對接多家廠商。從前期規劃、中期準備到活動當天，所有問題、需求都統一由單一窗口溝通，環節無縫銜接，大幅降低溝通成本，讓籌辦過程更輕鬆。
+                </p>
+            </div>
+        </div>
+
+        <!-- 底部諮詢按鈕 -->
+        <div class="mt-12 pt-6 border-t">
+            <a href="index.html#contact" class="inline-block bg-accent text-white px-6 py-3 rounded-card hover:bg-accent/90">立即線上諮詢</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-textDark py-6 text-center text-sm text-white/60">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(i => i.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設計統籌 - 大邁活動整合有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .service-block { margin-bottom: 3rem; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 全站統一LOGO -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="index.html" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="index.html#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="index.html#services" class="nav-item active text-white px-3 py-2">服務項目</a></li>
+                <li><a href="index.html#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="index.html#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-2xl text-white">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="index.html" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="index.html#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="index.html#services" class="mobile-nav-item active block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="index.html#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <a href="index.html#services" class="inline-flex items-center text-accent mb-6 hover:underline">← 返回服務列表</a>
+
+    <div class="bg-white rounded-card shadow-md p-6 md:p-8">
+        <!-- 頁面頂部主橫幅 3:1 比例 -->
+        <h1 class="text-3xl font-bold text-brand mb-4">設計統籌</h1>
+        <!--<img src="https://picsum.photos/id/29/1200/400" alt="設計統籌服務" class="w-full h-56 object-cover rounded-card mb-10">-->
+        <img src="pig/S03/s03_00.png" alt="設計統籌" class="w-full aspect-[3/1] object-cover rounded-card mb-10">
+
+        <!-- 1. 整體設計規劃 (左圖右文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+         <!--     <img src="https://picsum.photos/id/31/600/400" alt="整體設計規劃" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S03/s03_01.png" alt="整體設計規劃" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">整體設計規劃</h2>
+                <p class="text-textLight leading-loose">
+                    依據企業品牌形象、活動主題與活動屬性，打造一整套視覺設計規劃方案。從前期風格定調、色彩搭配到整體視覺延伸，統一全場視覺風格，讓活動氛圍與品牌理念完美融合，打造專屬活動視覺體驗。
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. 活動主視覺設計 (右圖左文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">活動主視覺設計</h2>
+                <p class="text-textLight leading-loose">
+                    專業團隊打造活動核心主視覺，結合活動目標與整體風格，設計吸睛且具記憶點的視覺圖案。主視覺可延伸運用於各類文宣、背板、動線指標等處，成為整場活動的視覺核心。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+            <!--    <img src="https://picsum.photos/id/32/600/400" alt="活動主視覺設計" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S03/s03_02.png" alt="活動主視覺設計" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 3. 會場整體佈置 (左圖右文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+              <!--     <img src="https://picsum.photos/id/33/600/400" alt="會場整體佈置" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S03/s03_03.png" alt="會場整體佈置" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">會場整體佈置</h2>
+                <p class="text-textLight leading-loose">
+                    針對會場空間進行全方位視覺佈局，依照人流动線、活動區域規劃佈置內容。無論是大型商業活動、典禮或是小型聚會，都能依場地特性打造協調美觀、兼具實用性的會場環境。
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. 形象牆 & 舞台背板 (右圖左文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">形象牆 & 舞台背板</h2>
+                <p class="text-textLight leading-loose">
+                    設計並製作各式形象牆、迎賓牆與大型舞台背板，結合品牌LOGO、活動主視覺與視覺特效。材質選擇多元、做工精緻，是活動拍照打卡、舞台畫面的重點視覺區域。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!-- <img src="https://picsum.photos/id/34/600/400" alt="形象牆與舞台背板" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                  <img src="pig/S03/s03_04.png" alt="形象牆與舞台背板" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 5. 動線指引設計 (左圖右文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+        <!--        <img src="https://picsum.photos/id/35/600/400" alt="動線指引設計" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                 <img src="pig/S03/s03_05.png" alt="動線指引設計" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">動線指引設計</h2>
+                <p class="text-textLight leading-loose">
+                    規劃並設計場地動線指標、座位表、立牌、旗幟等指引物件。視覺風格與整體活動統一，標示清晰易懂，引導來賓順利移動，提升現場流暢度與參與體驗。
+                </p>
+            </div>
+        </div>
+
+        <!-- 6. 花藝與氛圍佈置 (右圖左文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">花藝與氛圍佈置</h2>
+                 
+                <p class="text-textLight leading-loose">
+                    搭配精緻花藝、氣球造型、燈飾等軟裝佈置，依活動氛圍打造不同風格場景。溫馨、時尚、莊重等各類風格皆可實現，為活動增添層次感與儀式感。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+             <!--      <img src="https://picsum.photos/id/36/600/400" alt="花藝與氛圍佈置" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S03/s03_06.png" alt="花藝與氛圍佈置" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 7. 品牌視覺整合 (左圖右文) -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+              <!--     <img src="https://picsum.photos/id/37/600/400" alt="品牌視覺整合" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+             <img src="pig/S03/s03_07.png" alt="品牌視覺整合" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">品牌視覺整合</h2>
+                <p class="text-textLight leading-loose">
+                    全程以企業品牌為核心，整合所有設計內容，確保LOGO、標準色、視覺元素全域統一。強化品牌曝光與形象塑造，讓每一處設計都能傳遞企業價值。
+                </p>
+            </div>
+        </div>
+
+        <!-- 底部諮詢按鈕 -->
+        <div class="mt-12 pt-6 border-t">
+            <a href="index.html#contact" class="inline-block bg-accent text-white px-6 py-3 rounded-card hover:bg-accent/90">立即線上諮詢</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-textDark py-6 text-center text-sm text-white/60">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(i => i.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+</body>
+</html>

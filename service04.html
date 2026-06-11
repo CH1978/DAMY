@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影像統籌 - 大邁活動整合有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1a3a5c',
+                        accent: '#e8932c',
+                        secondary: '#f8f9fa',
+                        textDark: '#1e2a3a',
+                        textLight: '#6c757d'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    borderRadius: { 'card': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; padding-top: 80px; }
+        #mainNav { position: fixed; top:0; left:0; width:100%; z-index:9999; background:#1a3a5c; box-shadow:0 2px 10px rgba(0,0,0,0.15); }
+        .nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .mobile-nav-item.active { background:rgba(232,147,44,0.3); border-radius:8px; padding:6px 12px; }
+        .service-block { margin-bottom: 3rem; }
+    </style>
+</head>
+<body class="bg-secondary text-textDark">
+
+<nav id="mainNav">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 全站統一LOGO：logo.png -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="大邁活動整合有限公司" class="h-14 w-auto">
+            </a>
+            <ul class="hidden md:flex items-center gap-2">
+                <li><a href="index.html" class="nav-item text-white px-3 py-2">首頁</a></li>
+                <li><a href="index.html#story" class="nav-item text-white px-3 py-2">品牌故事</a></li>
+                <li><a href="index.html#services" class="nav-item active text-white px-3 py-2">服務項目</a></li>
+                <li><a href="index.html#news" class="nav-item text-white px-3 py-2">最新消息</a></li>
+                <li><a href="index.html#contact" class="nav-item text-white px-3 py-2">聯絡我們</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-2xl text-white">☰</button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <ul class="flex flex-col px-4 py-4 gap-2">
+            <li><a href="index.html" class="mobile-nav-item block py-2 px-3 text-textDark">首頁</a></li>
+            <li><a href="index.html#story" class="mobile-nav-item block py-2 px-3 text-textDark">品牌故事</a></li>
+            <li><a href="index.html#services" class="mobile-nav-item active block py-2 px-3 text-textDark">服務項目</a></li>
+            <li><a href="index.html#news" class="mobile-nav-item block py-2 px-3 text-textDark">最新消息</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-item block py-2 px-3 text-textDark">聯絡我們</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <a href="index.html#services" class="inline-flex items-center text-accent mb-6 hover:underline">← 返回服務列表</a>
+
+    <div class="bg-white rounded-card shadow-md p-6 md:p-8">
+        <!-- 頁面頂部主橫幅 -->
+        <h1 class="text-3xl font-bold text-brand mb-4">影像統籌</h1>
+        <!--<img src="https://picsum.photos/id/30/1200/400" alt="影像統籌服務" class="w-full h-56 object-cover rounded-card mb-10">-->
+        <img src="pig/S04/s04_00.png" alt="影像統籌服務" class="w-full aspect-[3/1] object-cover rounded-card mb-10">
+
+        <!-- 1. 影像統籌 總介紹（左圖右文） -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/40/600/400" alt="影像統籌總覽" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S04/s04_01.png" alt="影像統籌總覽" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">影像統籌</h2>
+                <p class="text-textLight leading-loose">
+                    我們提供全方位一條龍影像服務，涵蓋平面攝影、動態錄影、現場直播、VJ動畫與後製影片製作。無論是企業尾牙、品牌發表會、典禮活動等各類場合，都能運用專業設備與資深團隊，完整捕捉活動精彩瞬間，打造高品質影像內容，放大活動曝光與傳播效果。
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. 平面攝影（右圖左文 交替排版） -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">平面攝影</h2>
+                <p class="text-textLight leading-loose">
+                    專業商業活動平面攝影團隊，善於捕捉現場精彩畫面與互動瞬間。拍攝作品畫質精良、構圖專業，不僅可作為活動紀念素材，也適用於後續品牌宣傳、文宣製作，為活動留下珍貴且具質感的視覺記錄。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/41/600/400" alt="平面攝影" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S04/s04_02.png" alt="平面攝影" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 3. 動態攝影（左圖右文） -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/42/600/400" alt="動態攝影" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S04/s04_03.png" alt="動態攝影" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">動態攝影</h2>
+                <p class="text-textLight leading-loose">
+                    採用專業錄影設備進行全程記錄，真實還原活動氛圍、流程與現場情感。影片畫面穩定流暢，可完整留存活動全貌，後續可用於品牌形象宣傳、活動回顧分享，延續活動影響力。
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. 直播轉播（右圖左文） -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">直播轉播</h2>
+                <p class="text-textLight leading-loose">
+                    提供穩定高畫質現場直播服務，支援多平台串流傳輸。讓無法到場的嘉賓、客戶也能即時觀看活動，有效擴大活動覆蓋範圍與品牌曝光。全程技術團隊駐場，保障音畫流暢、傳輸穩定。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/43/600/400" alt="直播轉播" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S04/s04_04.png" alt="直播轉播" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 5. VJ動畫（左圖右文） -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <!--<img src="https://picsum.photos/id/44/600/400" alt="VJ動畫" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S04/s04_05.png" alt="VJ動畫" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-brand mb-3">VJ動畫</h2>
+                <p class="text-textLight leading-loose">
+                    依活動主題、氛圍客製VJ動畫與視覺背景，可配合舞台節奏即時切換畫面。豐富的動態視覺效果能提升舞台層次與現場感染力，為表演、開場、互動環節增添創意與動感。
+                </p>
+            </div>
+        </div>
+
+        <!-- 6. 影片製作（右圖左文） -->
+        <div class="service-block grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-xl font-bold text-brand mb-3">影片製作</h2>
+                <p class="text-textLight leading-loose">
+                    活動後專業後製團隊負責影片剪輯、配樂、字幕、特效包裝，可製作精華短片、全程紀錄片、形象影片等。成品適合社群分享、官網展示、行銷推廣，持續為品牌創造話題與曝光度。
+                </p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!--<img src="https://picsum.photos/id/45/600/400" alt="影片製作" class="w-full h-60 object-cover rounded-card shadow-sm">-->
+                <img src="pig/S04/s04_06.png" alt="影片製作" class="w-full aspect-[3/2] object-cover rounded-card shadow-sm">
+            </div>
+        </div>
+
+        <!-- 底部諮詢按鈕 -->
+        <div class="mt-12 pt-6 border-t">
+            <a href="index.html#contact" class="inline-block bg-accent text-white px-6 py-3 rounded-card hover:bg-accent/90">立即線上諮詢</a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-textDark py-6 text-center text-sm text-white/60">
+    <div class="max-w-[1280px] mx-auto px-4">
+        <p>大邁活動整合有限公司 © 2025 All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(i => i.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+</body>
+</html>
